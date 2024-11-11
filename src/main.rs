@@ -27,7 +27,7 @@ async fn get_hash(url: &str) -> anyhow::Result<String> {
 }
 
 fn get_url(version: &str) -> String {
-    format!("https://github.com/matter-labs/zksolc-bin/releases/download/v{version}/zksolc-linux-amd64-musl-v{version}")
+    format!("https://github.com/matter-labs/zksolc-bin/raw/main/linux-amd64/zksolc-linux-amd64-musl-v{version}")
 }
 
 #[tokio::main]
