@@ -342,4 +342,15 @@ with inputs.nixpkgs;
             url = "https://github.com/matter-labs/zksolc-bin/raw/main/linux-amd64/zksolc-linux-amd64-musl-v1.5.7";
         };
     };
+    zksolc_1_5_8 = stdenv.mkDerivation {
+        dontBuild = true;
+        dontUnpack = true;
+        installPhase = "mkdir -p $out/bin; cp $src $out/bin/zksolc; chmod +x $out/bin/zksolc";
+        pname = "zksolc";
+        version = "1.5.8";
+        src = builtins.fetchurl {
+            sha256 = "sha256-MZisl0qMuAQ8auztZ4Mg0e61djFruVMkmLVrv44eKTM=";
+            url = "https://github.com/matter-labs/zksolc-bin/raw/main/linux-amd64/zksolc-linux-amd64-musl-v1.5.8";
+        };
+    };
 }
